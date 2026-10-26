@@ -1,0 +1,12 @@
+# Python packages for VR Studio's voice and checks (the .tts/ environment, Python 3.11).
+# The versions running on the Mac on 2026-10-25. setup/setup-wsl.sh installs from this file:
+#   uv venv --python 3.11 .tts && uv pip install --python .tts/bin/python -r setup/requirements.txt
+chatterbox-tts==0.1.7     # the voice (pulls torch and torchaudio 2.6.0)
+torch==2.6.0
+torchaudio==2.6.0
+faster-whisper==1.2.1     # hears every voice line and the final mix (the word gates)
+numpy==1.26.4
+scipy==1.17.1             # motion gate
+pillow==12.3.0            # key-frame boards and review sheets
+requests==2.34.2          # PostRelay uploads and status
+tzdata                    # time zones for scheduling on Windows
